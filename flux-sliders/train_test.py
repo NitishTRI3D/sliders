@@ -630,9 +630,15 @@ def generate_samples(pipe, networks, target_prompt, output_dir, step, height, wi
 
 # Add this function to load and process images
 def load_image_latents(image_path, vae, device, height=512, width=512):
+    """
+    Load and encode an image into latent space
+    """
     image = Image.open(image_path).convert('RGB')
     image = image.resize((width, height), Image.LANCZOS)
-    image = transforms.ToTensor()(image).unsqueeze(0).to(device)
+    image = transforms.ToTensor()(image).unsqueeze(0)
+    
+    # Convert to the same dtype as the VAE
+    image = image.to(device=device, dtype=vae.dtype)
     image = 2.0 * image - 1.0
     
     with torch.no_grad():
@@ -679,6 +685,7 @@ for epoch in range(max_train_steps):
     selected_set = random.choice(dataset_sets)
     
     with torch.no_grad():
+        target_latents = load_image_latents(selected_set["target"], vae, device, height, width)
         packed_noisy_model_input = pipe(
                         target_prompt,
                         height=height,
@@ -690,7 +697,8 @@ for epoch in range(max_train_steps):
                         generator=None,
                         from_timestep=0,
                         till_timestep=timestep_to_infer,
-                        output_type='latent'
+                        output_type='latent',
+                        latents=target_latents
                     )
         vae_scale_factor = 2 ** (len(vae.config.block_out_channels))
         # calculate this only once since it is only used for shape (TODO: think of a more efficient way)
