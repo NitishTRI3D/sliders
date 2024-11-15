@@ -1,0 +1,135 @@
+diffusers-unet-keys
+    transformer_blocks.9.norm1
+    transformer_blocks.9.norm1.silu
+    transformer_blocks.9.norm1.linear
+    transformer_blocks.9.norm1.norm
+    transformer_blocks.9.norm1_context
+    transformer_blocks.9.norm1_context.silu
+    transformer_blocks.9.norm1_context.linear
+    transformer_blocks.9.norm1_context.norm
+    transformer_blocks.9.attn
+    transformer_blocks.9.attn.norm_q
+    transformer_blocks.9.attn.norm_k
+    transformer_blocks.9.attn.to_q
+    transformer_blocks.9.attn.to_k
+    transformer_blocks.9.attn.to_v
+    transformer_blocks.9.attn.add_k_proj
+    transformer_blocks.9.attn.add_v_proj
+    transformer_blocks.9.attn.add_q_proj
+    transformer_blocks.9.attn.to_out
+    transformer_blocks.9.attn.to_out.0
+    transformer_blocks.9.attn.to_out.1
+    transformer_blocks.9.attn.to_add_out
+    transformer_blocks.9.attn.norm_added_q
+    transformer_blocks.9.attn.norm_added_k
+    transformer_blocks.9.norm2
+    transformer_blocks.9.ff
+    transformer_blocks.9.ff.net
+    transformer_blocks.9.ff.net.0
+    transformer_blocks.9.ff.net.0.proj
+    transformer_blocks.9.ff.net.1
+    transformer_blocks.9.ff.net.2
+    transformer_blocks.9.norm2_context
+    transformer_blocks.9.ff_context
+    transformer_blocks.9.ff_context.net
+    transformer_blocks.9.ff_context.net.0
+    transformer_blocks.9.ff_context.net.0.proj
+    transformer_blocks.9.ff_context.net.1
+    transformer_blocks.9.ff_context.net.2
+
+unet-diffusers-attn-keys-only
+    transformer_blocks.9.attn.norm_q
+    transformer_blocks.9.attn.norm_k
+    transformer_blocks.9.attn.to_q
+    transformer_blocks.9.attn.to_k
+    transformer_blocks.9.attn.to_v
+    transformer_blocks.9.attn.add_k_proj
+    transformer_blocks.9.attn.add_v_proj
+    transformer_blocks.9.attn.add_q_proj
+    transformer_blocks.9.attn.to_out
+    transformer_blocks.9.attn.to_out.0
+    transformer_blocks.9.attn.to_out.1
+    transformer_blocks.9.attn.to_add_out
+    transformer_blocks.9.attn.norm_added_q
+    transformer_blocks.9.attn.norm_added_k
+
+relevant for lora-unet-keys
+    transformer_blocks.9.attn.to_q
+    transformer_blocks.9.attn.to_k
+    transformer_blocks.9.attn.to_v
+    transformer_blocks.9.attn.add_k_proj
+    transformer_blocks.9.attn.add_v_proj
+    transformer_blocks.9.attn.add_q_proj
+    transformer_blocks.9.attn.to_out.0
+    transformer_blocks.9.attn.to_add_out
+
+
+
+lora-unet-keys
+    "lora_unet_transformer_blocks_9_attn_to_q.alpha": "transformer.transformer_blocks.9.attn.to_q.alpha",
+    "lora_unet_transformer_blocks_9_attn_to_q.lora_down.weight": "transformer.transformer_blocks.9.attn.to_q.lora_A.weight",
+    "lora_unet_transformer_blocks_9_attn_to_q.lora_up.weight": "transformer.transformer_blocks.9.attn.to_q.lora_B.weight",
+    "lora_unet_transformer_blocks_9_attn_to_k.alpha": "transformer.transformer_blocks.9.attn.to_k.alpha",
+    "lora_unet_transformer_blocks_9_attn_to_k.lora_down.weight": "transformer.transformer_blocks.9.attn.to_k.lora_A.weight",
+    "lora_unet_transformer_blocks_9_attn_to_k.lora_up.weight": "transformer.transformer_blocks.9.attn.to_k.lora_B.weight",
+    "lora_unet_transformer_blocks_9_attn_to_v.alpha": "transformer.transformer_blocks.9.attn.to_v.alpha",
+    "lora_unet_transformer_blocks_9_attn_to_v.lora_down.weight": "transformer.transformer_blocks.9.attn.to_v.lora_A.weight",
+    "lora_unet_transformer_blocks_9_attn_to_v.lora_up.weight": "transformer.transformer_blocks.9.attn.to_v.lora_B.weight",
+    "lora_unet_transformer_blocks_9_attn_add_k_proj.alpha": "transformer.transformer_blocks.9.attn.add_k_proj.alpha",
+    "lora_unet_transformer_blocks_9_attn_add_k_proj.lora_down.weight": "transformer.transformer_blocks.9.attn.add_k_proj.lora_A.weight",
+    "lora_unet_transformer_blocks_9_attn_add_k_proj.lora_up.weight": "transformer.transformer_blocks.9.attn.add_k_proj.lora_B.weight",
+    "lora_unet_transformer_blocks_9_attn_add_v_proj.alpha": "transformer.transformer_blocks.9.attn.add_v_proj.alpha",
+    "lora_unet_transformer_blocks_9_attn_add_v_proj.lora_down.weight": "transformer.transformer_blocks.9.attn.add_v_proj.lora_A.weight",
+    "lora_unet_transformer_blocks_9_attn_add_v_proj.lora_up.weight": "transformer.transformer_blocks.9.attn.add_v_proj.lora_B.weight",
+    "lora_unet_transformer_blocks_9_attn_add_q_proj.alpha": "transformer.transformer_blocks.9.attn.add_q_proj.alpha",
+    "lora_unet_transformer_blocks_9_attn_add_q_proj.lora_down.weight": "transformer.transformer_blocks.9.attn.add_q_proj.lora_A.weight",
+    "lora_unet_transformer_blocks_9_attn_add_q_proj.lora_up.weight": "transformer.transformer_blocks.9.attn.add_q_proj.lora_B.weight",
+    "lora_unet_transformer_blocks_9_attn_to_out_0.alpha": "transformer.transformer_blocks.9.attn.to_out.alpha",
+    "lora_unet_transformer_blocks_9_attn_to_out_0.lora_down.weight": "transformer.transformer_blocks.9.attn.to_out.lora_A.weight",
+    "lora_unet_transformer_blocks_9_attn_to_out_0.lora_up.weight": "transformer.transformer_blocks.9.attn.to_out.lora_B.weight",
+    "lora_unet_transformer_blocks_9_attn_to_add_out.alpha": "transformer.transformer_blocks.9.attn.to_add_out.alpha",
+    "lora_unet_transformer_blocks_9_attn_to_add_out.lora_down.weight": "transformer.transformer_blocks.9.attn.to_add_out.lora_A.weight",
+    "lora_unet_transformer_blocks_9_attn_to_add_out.lora_up.weight": "transformer.transformer_blocks.9.attn.to_add_out.lora_B.weight",
+
+
+comfyu-lora-keys
+
+comfyui-unet-keys-attn-only
+    double_blocks.9.img_attn.norm.key_norm.scale
+    double_blocks.9.img_attn.norm.query_norm.scale
+    double_blocks.9.img_attn.proj.bias
+    double_blocks.9.img_attn.proj.weight
+    double_blocks.9.img_attn.qkv.bias
+    double_blocks.9.img_attn.qkv.weight
+    double_blocks.9.txt_attn.norm.key_norm.scale
+    double_blocks.9.txt_attn.norm.query_norm.scale
+    double_blocks.9.txt_attn.proj.bias
+    double_blocks.9.txt_attn.proj.weight
+    double_blocks.9.txt_attn.qkv.bias
+    double_blocks.9.txt_attn.qkv.weight
+
+comfyui-unet-keys
+    double_blocks.9.img_attn.norm.key_norm.scale
+    double_blocks.9.img_attn.norm.query_norm.scale
+    double_blocks.9.img_attn.proj.bias
+    double_blocks.9.img_attn.proj.weight
+    double_blocks.9.img_attn.qkv.bias
+    double_blocks.9.img_attn.qkv.weight
+    double_blocks.9.img_mlp.0.bias
+    double_blocks.9.img_mlp.0.weight
+    double_blocks.9.img_mlp.2.bias
+    double_blocks.9.img_mlp.2.weight
+    double_blocks.9.img_mod.lin.bias
+    double_blocks.9.img_mod.lin.weight
+    double_blocks.9.txt_attn.norm.key_norm.scale
+    double_blocks.9.txt_attn.norm.query_norm.scale
+    double_blocks.9.txt_attn.proj.bias
+    double_blocks.9.txt_attn.proj.weight
+    double_blocks.9.txt_attn.qkv.bias
+    double_blocks.9.txt_attn.qkv.weight
+    double_blocks.9.txt_mlp.0.bias
+    double_blocks.9.txt_mlp.0.weight
+    double_blocks.9.txt_mlp.2.bias
+    double_blocks.9.txt_mlp.2.weight
+    double_blocks.9.txt_mod.lin.bias
+    double_blocks.9.txt_mod.lin.weight

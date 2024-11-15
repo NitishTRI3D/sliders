@@ -140,15 +140,15 @@ training_eta = 1
 lr = 0.002
 
 
-slider_name = 'test-to_out_0'
+slider_name = 'bust-dev-detailed'
 output_dir = 'outputs/' + slider_name + '/'
 
 os.makedirs(output_dir, exist_ok=True)
 
 
-target_prompt = 'picture of a person'
-positive_prompt = 'picture of a very fat, obese person'
-negative_prompt = 'picture of a very thin, athletic person'
+target_prompt = 'picture of a atheletic japanese 30 year model with brown hair, wearing blue bikini, smiling at camera, standing a plain gray studio background, wearing black sandals,'
+positive_prompt = 'picture of a atheletic japanese 30 year model with brown hair, wearing blue bikini, smiling at camera, standing a plain gray studio background, wearing black sandals, facing camera straight in a casual pose, woman is voluptous, huge breasts, big boobs, bra size 36DD, curvy breasts, busty boobs, porn star, huge cleavage'
+negative_prompt = 'picture of a atheletic japanese 30 year model with brown hair, wearing blue bikini, smiling at camera, standing a plain gray studio background, wearing black sandals, flat chest, small tiny breasts, no boobs, no tits, no bust, no cleavage, no cleavage, no cleavage'
 
 # lora params
 alpha = 1
